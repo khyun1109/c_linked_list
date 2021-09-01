@@ -86,13 +86,13 @@ listnode *FindNodeByValue(list *l, void *data)
 		return NULL;
 
 	node = l->head;
-	while ((node)) {
-		if (!strcmp(node->data,data))
+	while((node)) {
+		if(!strcmp(node->data,data))
 			return node;
 
 		node = node->next;
 	}
-
+	printf("I can't find!!\n");
 	return NULL;
 }
 
@@ -150,17 +150,13 @@ int main()
 	l = malloc(sizeof(list));
 	memset(l, 0x00, sizeof(list));
 
-	p="test1";
-	AddNode(l, p, strlen(p)+1);
-
-	p="test2";
-	AddNode(l, p, strlen(p)+1);
-	printf("list->head =\t%p\n", l->head);
-	printf("list->head->data=\t%s\n", l->head->data);
-	printf("list->tail =\t%p\n", l->tail);
-	printf("list->tail->data=\t%s\n", l->tail->data);
-	printf("list->head->next = \t%p\n", l->head->next);
-
+	char input[100];
+	char value[100];
+	while(1){
+	//Input your code here
+	//
+	//
+	}
 
 	PrintList(l);
 	FreeList(l);
